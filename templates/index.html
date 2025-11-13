@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NIFTY 50 Advanced Chart</title>
+  {{ cdn|safe }}
+  <style>
+    body {
+      background-color: #111;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+    h2 {
+      text-align: center;
+      color: #00FFFF;
+      padding-top: 10px;
+    }
+    .controls {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    select {
+      padding: 5px 10px;
+      font-size: 16px;
+      background-color: #222;
+      color: #00FFFF;
+      border: 1px solid #00FFFF;
+      border-radius: 4px;
+    }
+    .chart-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <h2>📊 NIFTY 50 Advanced Interactive Chart</h2>
+
+  <div class="controls">
+    <form action="/" method="get">
+      <label for="timeframe">🕒 Timeframe:</label>
+      <select name="timeframe" id="timeframe" onchange="this.form.submit()">
+        {% for tf in timeframes %}
+          <option value="{{ tf }}" {% if tf == current_timeframe %}selected{% endif %}>{{ tf }}</option>
+        {% endfor %}
+      </select>
+    </form>
+  </div>
+
+  <div class="chart-container">
+    {{ div|safe }}
+  </div>
+
+  {{ script|safe }}
+</body>
+</html>

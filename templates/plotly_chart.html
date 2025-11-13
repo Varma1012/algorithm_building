@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NIFTY 50 Chart</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <h1>NIFTY 50 Interactive Chart</h1>
+    <div id="chart"></div>
+    <script>
+        // Parse the JSON string to JavaScript object
+        var graph = JSON.parse('{{ graphJSON | safe }}');
+
+        // Render the chart
+        Plotly.newPlot('chart', graph.data, graph.layout);
+    </script>
+</body>
+</html>
