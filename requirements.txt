@@ -1,4 +1,4 @@
-alpaca==1.0.0
+alpaca-py==0.43.2
 bokeh==3.4.0
 Flask==3.0.3
 numpy==1.26.4
