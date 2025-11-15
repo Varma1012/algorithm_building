@@ -1,11 +1,11 @@
 alpaca==1.0.0
-bokeh==3.8.1
-Flask==3.1.2
-numpy==2.3.4
+bokeh==3.4.0
+Flask==3.0.3
+numpy==1.26.4
 openpyxl==3.1.5
-pandas==2.3.3
+pandas==2.2.2
 python-dotenv==1.2.1
-scikit_learn==1.7.2
+scikit-learn==1.4.2
 ta==0.11.0
-yfinance==0.2.66
+yfinance==0.2.37
 gunicorn==23.0.0
